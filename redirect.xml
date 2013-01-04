@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="user">
+	<name>plg_user_redirect</name>
+	<author>Bruno Batista</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) 2013 AtomTech, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>bruno@atomtech.com.br</authorEmail>
+	<authorUrl>http://www.atomtech.com.br</authorUrl>
+	<version>3.0.0</version>
+	<description>PLG_USER_REDIRECT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="redirect">redirect.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="pt-BR">language/pt-BR/pt-BR.plg_user_redirect.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.plg_user_redirect.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+		</fields>
+	</config>
+</extension>
