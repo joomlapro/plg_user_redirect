@@ -12,7 +12,7 @@ defined('JPATH_BASE') or die;
 /**
  * Redirect User plugin
  *
- * @package     Bolsas
+ * @package     Joomla.Plugin
  * @subpackage  User.redirect
  * @since       3.0
  */
@@ -61,15 +61,11 @@ class PlgUserRedirect extends JPlugin
 			return false;
 		}
 
-		if (!in_array(8, $instance->groups))
+		foreach ($this->params->def('groups') as $i => $group)
 		{
-			foreach ($params->get('access_group') as $i => $group)
+			if (in_array($group, $instance->groups))
 			{
-				if (in_array($group, $instance->groups))
-				{
-					// Redirect to the cpanel.
-					$app->setUserState('users.login.form.return', JRoute::_(BolsasHelperRoute::getCpanelRoute(), false));
-				}
+				$app->setUserState('users.login.form.return', 'index.php?&Itemid=' . $this->params->def('redirect', 101));
 			}
 		}
 

@@ -19,7 +19,12 @@
 	</languages>
 	<config>
 		<fields name="params">
-
+			<fieldset name="basic">
+				<field name="redirect" type="menuitem" disable="separator" label="PLG_REDIRECT_FIELD_REDIRECT_LABEL" description="PLG_REDIRECT_FIELD_REDIRECT_DESC">
+					<option value="">JDEFAULT</option>
+				</field>
+				<field name="groups" type="usergroup" multiple="true" size="10" label="PLG_REDIRECT_FIELD_GROUPS_LABEL" description="PLG_REDIRECT_FIELD_GROUPS_DESC" />
+			</fieldset>
 		</fields>
 	</config>
 </extension>
